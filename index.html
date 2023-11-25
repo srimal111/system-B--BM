@@ -1,197 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start; /* Align items to the top */
-      min-height: 100vh;
-      background-color: #f4f4f4;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-    .card-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      max-width: 800px; /* Set a maximum width for the card container */
-      margin: 0 auto; /* Center the card container on larger screens */
-    }
+        .contact-card {
+            width: 340px;
+            height: 60px;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between; /* Align items with space between them */
+            align-items: center; /* Center vertically */
+        }
 
-    .card {
-      width: 100%; /* Make the cards take the full width of the container */
-      max-width: 400px; /* Set a maximum width for each card */
-      margin: 10px 0; /* Add some spacing between cards */
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column; /* Stack the elements vertically on small screens */
-      align-items: center;
-      padding: 15px;
-    }
+        .contact-details {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
 
-    .card-text {
-      font-size: 16px;
-      color: #333;
-      text-align: center; /* Center the text */
-      margin-top: 10px; /* Add some space between the icon and text */
-    }
+        .contact-image-container {
+            width: 50px;
+            height: 60px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
 
-    .icon {
-      width: 60px;
-      height: 56px;
-      background-color: #3498db;
-      border-radius: 50%;
-      background-size: cover;
-      margin-bottom: 10px; /* Add some space between the icon and text */
-    }
+        .contact-image {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
 
-    .Designation {
-      font-size: small;
-      color: gray;
-      text-align: center; /* Center the designation text */
-    }
+        .name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
 
-    .icons {
-      display: flex;
-      justify-content: space-around; /* Spread the buttons evenly */
-      width: 100%; /* Make the buttons take the full width */
-    }
+        .job-title {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+        }
 
-    .btn_one {
-      flex: 1; /* Make the buttons take equal width */
-      margin: 5px; /* Add some spacing between buttons */
-      padding: 5px;
-      text-align: center;
-      border-radius: 10px;
-      border: none;
-      background-color: blueviolet;
-      color: white;
-    }
+        .contact-buttons {
+            display: flex;
+            flex-direction: column; /* Align buttons vertically */
+            align-items: flex-end; /* Align buttons to the right */
+            padding: 10px;
+        }
 
-    @media only screen and (min-width: 600px) {
-      /* Apply styles for screens with a minimum width of 600px */
-      .card {
-        flex-direction: row; /* Align elements horizontally on larger screens */
-        align-items: center;
-      }
-
-      .card-text {
-        margin: 0 30px; /* Adjust margin for the text on larger screens */
-      }
-    }
-  </style>
+        .call-button {
+            margin-top: 5px; /* Add spacing between buttons */
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 90px;
+            height: 20px;
+            font-size:x-small;
+        }
+    </style>
 </head>
 <body>
 
-<div class="card-container">
-  <h1 style="text-align: center;">BLOCK OFFICE <br> SYSTEM B</h1>
-
-  <!-- Card 1 -->
-  <div class="card">
-    <div class="icon" style="background-image: url('one.jpg');"></div>
-    <div class="card-text"><b>Mrs. Sasiwadani</b><br>
-      <span class="Designation">Designation: Block Manager (Aselapura)</span><br>
+    <div class="contact-card">
+        <div class="contact-details">
+            <div class="contact-image-container">
+                <img class="contact-image" src="one.jpg" alt="Profile Image">
+            </div>
+            <div>
+                <div class="name">John Doe</div>
+                <div class="job-title">Web Developer</div>
+            </div>
+        </div>
+        <div class="contact-buttons">
+            <button class="call-button">Call Landline</button>
+            <button class="call-button">Call Mobile</button>
+        </div>
     </div>
-    <div class="icons">
-      <button class="btn_one">Call Land</button><br>
-      <button class="btn_one">Call Mobile</button>
-    </div>
-  </div>
-
-  <!-- Card 2 -->
-  <div class="card">
-    <div class="icon" style="background-image: url('one.jpg');"></div>
-    <div class="card-text"><b>Mr. Y.M.L.S.Bandara </b><br>
-      <span class="Designation">Designation: Block Manager (Damminna)</span><br>
-    </div>
-    <div class="icons">
-      <button class="btn_one">Call Land</button><br>
-      <button class="btn_one">Call Mobile</button>
-    </div>
-  </div>
-
-  <!-- Repeat the card elements for other individuals -->
-  
-  <!-- Card 3 -->
-  <div class="card">
-    <div class="icon" style="background-image: url('one.jpg');"></div>
-    <div class="card-text"><b>Mr. M.G.N.Jayakodi</b><br>
-      <span class="Designation">Designation: Block Manager (Dimbulagala)</span><br>
-    </div>
-    <div class="icons">
-      <button class="btn_one">Call Land</button><br>
-      <button class="btn_one">Call Mobile</button>
-    </div>
-  </div>
-
-  <!-- Card 4 -->
-  <div class="card">
-    <div class="icon" style="background-image: url('one.jpg');"></div>
-    <div class="card-text"><b>Mrs. R.A.Indrawathi</b><br>
-      <span class="Designation">Designation: Block Manager (Ellewewa)</span><br>
-    </div>
-    <div class="icons">
-      <button class="btn_one">Call Land</button><br>
-      <button class="btn_one">Call Mobile</button>
-    </div>
-  </div>
-
-  <!-- Card 5 -->
-  <div class="card">
-    <div class="icon" style="background-image: url('one.jpg');"></div>
-    <div class="card-text"><b>Mr.K.M.S.B.Senevirathna</b><br>
-      <span class="Designation">Designation: Block Manager (Senapura) </span><br>
-    </div>
-    <div class="icons">
-      <button class="btn_one">Call Land</button><br>
-      <button class="btn_one">Call Mobile</button>
-    </div>
-  </div>
-
-  <!-- Card 6 -->
-  <div class="card">
-    <div class="icon" style="background-image: url('one.jpg');"></div>
-    <div class="card-text"><b>Mr. W.A.W.W.Jayantha</b><br>
-      <span class="Designation">Designation: Block Manager (Sewanapitiya) </span><br>
-    </div>
-    <div class="icons">
-      <button class="btn_one">Call Land</button><br>
-      <button class="btn_one">Call Mobile</button>
-    </div>
-  </div>
-
-  <!-- Card 7 -->
-  <div class="card">
-    <div class="icon" style="background-image: url('one.jpg');"></div>
-    <div class="card-text"><b>Mrs.D.M.A.Priyadarshani</b><br>
-      <span class="Designation">Designation: Block Manager (Singhapura) </span><br>
-    </div>
-    <div class="icons">
-      <button class="btn_one">Call Land</button><br>
-      <button class="btn_one">Call Mobile</button>
-    </div>
-  </div>
-
-  <!-- Card 8 -->
-  <div class="card">
-    <div class="icon" style="background-image: url('one.jpg');"></div>
-    <div class="card-text"><b>Mr. H.L.A.Kelum Suranjith</b><br>
-      <span class="Designation">Designation: Block Manager (Wijayabapura)</span><br>
-    </div>
-    <div class="icons">
-      <button class="btn_one">Call Land</button><br>
-      <button class="btn_one">Call Mobile</button>
-    </div>
-  </div>
-</div>
 
 </body>
 </html>
