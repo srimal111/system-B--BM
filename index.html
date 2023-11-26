@@ -10,18 +10,25 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            font-family:Arial, Helvetica, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .contact-card {
             width: 340px;
-            height: 80px;
+            height: 85px;
             border: none;
             display: flex;
             justify-content: space-between; /* Align items with space between them */
             align-items: center; /* Center vertically */
             border-radius: 10px;
             background-color: #f0f0f0;
+            margin-bottom: 5px; /* Add margin between cards */
         }
 
         .contact-details {
@@ -47,7 +54,7 @@
         }
 
         .name {
-            font-size: 18px;
+            font-size: 13px;
             font-weight: bold;
             margin-top: 10px;
         }
@@ -58,6 +65,7 @@
             margin-bottom: 5px;
         }
 
+        
         .contact-buttons {
             display: flex;
             flex-direction: column; /* Align buttons vertically */
@@ -68,38 +76,75 @@
         .call-button {
             margin-top: 5px; /* Add spacing between buttons */
             padding: 5px 10px;
-            background-color:rgb(60, 60, 148);
+            background-color: rgb(60, 60, 148);
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             width: 90px;
             height: 25px;
-            font-size:x-small;
+            font-size: x-small;
         }
-        p{
-           color: gray;
+
+        p {
+            color: gray;
+            font-size: x-small;
         }
-        
+        .disgnation{
+            font-size: x-small;
+            color: gray;
+        }
+       
     </style>
 </head>
 <body>
 
-    <div class="contact-card">
-        <div class="contact-details">
-            <div class="contact-image-container">
-                <img class="contact-image" src="one.jpg" alt="Profile Image">
-            </div>
-            <div>
-                <div class="name">Mrs. Sasiwadani <br><span class="upname">Sasiwadani</span>
-                  <p style="font-size: x-small;">Block Manager (Aselapura)</p>
+    <div class="contact-container">
+
+        <div class="contact-card">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mrs. Sasiwadani <br>
+                        <span class="disgnation">Block Manager (Aselapura)</span><br>
+                        <p>Landline :<span id="bma_land">027-3128023</span><br>
+                         Mobile : <span id="bma_mobile">077-4795136</span><br>
+                         Fax : <span id="">027-2259065</span>
+                        </p>
+                    </div>
                 </div>
             </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('bma_land')">Call Landline</button>
+                <button class="call-button" onclick="callNumber('bma_mobile')">Call Mobile</button>
+            </div>
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
         </div>
-        <div class="contact-buttons">
-            <button class="call-button">Call Landline</button>
-            <button class="call-button">Call Mobile</button>
-        </div>
+
+
+
+        <!-- Add another card below -->
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
 
 </body>
