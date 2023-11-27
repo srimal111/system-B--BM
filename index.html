@@ -132,14 +132,115 @@
 
         <!-- Add another card below -->
        
+        <div class="contact-card">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mr.Y.M.L.S.Bandara <br>
+                        <span class="disgnation">Block Manager (Damminna)</span><br>
+                        <p>Landline :<span id="bmd_land">027-3279523</span><br>
+                         Mobile : <span id="bmd_mobile">071-8050296</span><br>
+                         Fax : <span id="">027-2259065</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('bmd_land')">Call Landline</button>
+                <button class="call-button" onclick="callNumber('bmd_mobile')">Call Mobile</button>
+            </div>
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
 
 
+        <div class="contact-card">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mr. M.G.N.Jayakodi<br>
+                        <span class="disgnation">Block Manager (Dimbulagala)</span><br>
+                        <p>Landline :<span id="bmdi_land">027-3279520</span><br>
+                         Mobile : <span id="bmdi_mobile">070-3759478</span><br>
+                         Fax : <span id="">027-2259065</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('bmdi_land')">Call Landline</button>
+                <button class="call-button" onclick="callNumber('bmdi_mobile')">Call Mobile</button>
+            </div>
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
 
 
+        <div class="contact-card">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mrs. R.A.Indrawathi<br>
+                        <span class="disgnation">Block Manager (Ellewewa)</span><br>
+                        <p>Landline :<span id="bme_land">027-2052424</span><br>
+                         Mobile : <span id="bme_mobile">071-3052956</span><br>
+                         Fax : <span id="">027-2259065</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('bme_land')">Call Landline</button>
+                <button class="call-button" onclick="callNumber('bme_mobile')">Call Mobile</button>
+            </div>
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
 
-
-
-
+        <div class="contact-card">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mr.K.M.S.B.Senevirathna<br>
+                        <span class="disgnation">Block Manager (Senapura)</span><br>
+                        <p>Landline :<span id="bms_land">027-2051313</span><br>
+                         Mobile : <span id="bms_mobile">071-4596710</span><br>
+                         Fax : <span id="">027-2259065</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('bms_land')">Call Landline</button>
+                <button class="call-button" onclick="callNumber('bms_mobile')">Call Mobile</button>
+            </div>
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
 
 
 
